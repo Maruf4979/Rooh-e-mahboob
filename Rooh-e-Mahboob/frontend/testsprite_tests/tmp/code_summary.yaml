@@ -1,0 +1,101 @@
+version: "2"
+type: frontend
+tech_stack:
+  - language: TypeScript
+  - framework: Next.js (App Router)
+  - ui_library: Vanilla CSS
+  - database: Supabase (PostgreSQL)
+  - storage: InsForge Storage
+routes:
+  - path: /
+    file: app/page.tsx
+    auth_required: false
+    description: Home page with product grid
+  - path: /about
+    file: app/about/page.tsx
+    auth_required: false
+    description: About Us page with Mission and Vision
+  - path: /auth/signin
+    file: app/auth/signin/page.tsx
+    auth_required: false
+    description: Sign-in page
+  - path: /auth/signup
+    file: app/auth/signup/page.tsx
+    auth_required: false
+    description: Sign-up page
+  - path: /login
+    file: app/auth/signin/page.tsx
+    auth_required: false
+    description: Redirects to /auth/signin
+  - path: /cart
+    file: app/cart/page.tsx
+    auth_required: false
+    description: Shopping cart and Checkout page
+  - path: /checkout
+    file: app/cart/page.tsx
+    auth_required: false
+    description: Redirects to /cart
+  - path: /collections
+    file: app/collections/page.tsx
+    auth_required: false
+    description: Product collections browsing
+  - path: /contact
+    file: app/contact/page.tsx
+    auth_required: false
+    description: Contact Us page
+  - path: /product
+    file: app/product/[slug]/page.tsx
+    auth_required: false
+    description: Individual product details
+  - path: /store
+    file: app/store/page.tsx
+    auth_required: false
+    description: Full store browsing
+  - path: /account
+    file: app/account/page.tsx
+    auth_required: true
+    description: User account and profile management
+features:
+  - name: User Authentication
+    description: Login and Signup with premium glassmorphism UI
+    files:
+      - app/auth/signin/page.tsx
+      - app/auth/signup/page.tsx
+    entry_route: /auth/signin
+    user_interactions:
+      - Fill email input [data-testid="login-email"]
+      - Fill password input [data-testid="login-password"]
+      - Click "Sign In" button [data-testid="login-submit"]
+      - Login via Google OAuth
+    api_calls:
+      - method: POST
+        endpoint: /api/auth
+    auth_required: false
+  - name: Checkout and Payments
+    description: Multi-method payment flow (COD, UPI, Card) on the Cart page
+    files:
+      - app/cart/page.tsx
+    entry_route: /cart
+    user_interactions:
+      - Select "Cash on Delivery (COD)", "UPI Payment", or "Credit / Debit Card"
+      - Fill shipping address (First Name, Last Name, Street Address, City, PIN Code)
+      - If UPI, check "I have completed the UPI payment"
+      - Click "Place Order", "Confirm UPI Payment", or "Pay with Card"
+    api_calls:
+      - method: POST
+        endpoint: /api/orders/create
+    auth_required: true
+  - name: User Profile Management
+    description: Profile picture upload and account detail updates
+    files:
+      - app/account/page.tsx
+    entry_route: /account
+    user_interactions:
+      - Upload profile picture to InsForge
+      - Update account information
+      - View order history
+    api_calls:
+      - method: POST
+        endpoint: /api/user/update
+    auth_required: true
+known_limitations: []

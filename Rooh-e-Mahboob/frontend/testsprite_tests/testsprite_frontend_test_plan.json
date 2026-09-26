@@ -1,0 +1,592 @@
+[
+  {
+    "id": "TC001",
+    "title": "Complete checkout with shipping details and payment selection",
+    "description": "This verifies that an authenticated customer can enter shipping details, choose a payment method, place the order, and see confirmation with status tracking.",
+    "category": "Checkout and Payment",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Enter shipping details"
+      },
+      {
+        "type": "action",
+        "description": "Select a payment method"
+      },
+      {
+        "type": "action",
+        "description": "Complete the transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order status tracking is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Browse products from the home page",
+    "description": "This verifies a guest shopper can view the home product grid and open a product detail page from it.",
+    "category": "Product Browsing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product grid is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click a product to view its details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product detail page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Complete checkout with cash on delivery",
+    "description": "This verifies that an authenticated customer can place an order using cash on delivery and see the resulting confirmation and status tracking.",
+    "category": "Checkout and Payment",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Enter shipping details"
+      },
+      {
+        "type": "action",
+        "description": "Select cash on delivery"
+      },
+      {
+        "type": "action",
+        "description": "Complete the transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order status tracking is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Complete checkout with UPI payment",
+    "description": "This verifies that an authenticated customer can place an order using UPI and see the resulting confirmation and status tracking.",
+    "category": "Checkout and Payment",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Enter shipping details"
+      },
+      {
+        "type": "action",
+        "description": "Select UPI payment"
+      },
+      {
+        "type": "action",
+        "description": "Complete the transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order status tracking is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Browse products from collections",
+    "description": "This verifies a guest shopper can browse collections and open a product detail page from that catalog.",
+    "category": "Product Browsing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collections catalog is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click a product to view its details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product detail page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Review cart contents before purchase",
+    "description": "This verifies that a shopper can open the cart and review the items currently added before proceeding to checkout.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart items are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart total is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Complete checkout with card payment",
+    "description": "This verifies that an authenticated customer can place an order using card payment and see the resulting confirmation and status tracking.",
+    "category": "Checkout and Payment",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Enter shipping details"
+      },
+      {
+        "type": "action",
+        "description": "Select card payment"
+      },
+      {
+        "type": "action",
+        "description": "Complete the transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order status tracking is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Sign in with email and password",
+    "description": "This verifies a returning user can authenticate with existing credentials and complete authentication successfully.",
+    "category": "Authentication",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /auth"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify authentication completes successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Upload a profile picture and save account details",
+    "description": "This verifies that an authenticated user can update profile information on the account page and see the saved changes reflected.",
+    "category": "Account Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /account"
+      },
+      {
+        "type": "action",
+        "description": "Upload a profile picture"
+      },
+      {
+        "type": "action",
+        "description": "Update account information"
+      },
+      {
+        "type": "action",
+        "description": "Save the account changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the saved profile changes are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the profile picture is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Browse products from the store catalog",
+    "description": "This verifies a guest shopper can browse the full store catalog and open a product detail page from it.",
+    "category": "Product Browsing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /store"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the store catalog is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click a product to view its details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product detail page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "View order history and open an order",
+    "description": "This verifies that an authenticated user can review past orders from the account page and open an order detail view.",
+    "category": "Account Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /account"
+      },
+      {
+        "type": "action",
+        "description": "View the order history"
+      },
+      {
+        "type": "action",
+        "description": "Open an order entry"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order details are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Return to browsing from a product page",
+    "description": "This verifies a shopper can open a product from browsing and return to the catalog afterward.",
+    "category": "Product Browsing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collections"
+      },
+      {
+        "type": "action",
+        "description": "Click a product to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Return to browsing from the product detail page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collections browsing page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Update cart quantity and see totals recalculate",
+    "description": "This verifies that a shopper can change an item quantity in the cart and see the cart total update accordingly.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "action",
+        "description": "Update the quantity of a cart item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated item quantity is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart total is updated"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Remove an item from the cart",
+    "description": "This verifies that a shopper can remove a cart item and the cart updates to reflect the removal.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "action",
+        "description": "Remove an item from the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the item is no longer displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart total is updated"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Toggle between sign-in and sign-up modes",
+    "description": "This verifies a user can switch authentication modes on the auth page and see the form update accordingly.",
+    "category": "Authentication",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /auth"
+      },
+      {
+        "type": "action",
+        "description": "Toggle to sign-up mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sign-up form is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Toggle back to sign-in mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sign-in form is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC016",
+    "title": "Read brand mission and vision",
+    "description": "This verifies a visitor can view the brand story on the About page and return to shopping.",
+    "category": "About Us Information",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /about"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the mission and vision content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Return to browsing from the About page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a shopping page is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC017",
+    "title": "Handle an empty cart",
+    "description": "This verifies that an empty cart shows an empty state instead of cart items.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty cart state is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC018",
+    "title": "Show an empty order history state",
+    "description": "This verifies that an authenticated user with no past orders sees an empty state instead of order history entries.",
+    "category": "Account Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /account"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty order history state is displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]

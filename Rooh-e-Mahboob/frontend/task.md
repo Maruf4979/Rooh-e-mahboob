@@ -1,0 +1,29 @@
+# Implementation Tasks
+
+- `[x]` Phase 1: Database Foundation
+  - `[x]` Install Prisma and initialize
+  - `[x]` Configure schema.prisma (Local SQLite for fast setup)
+  - `[x]` Create seed script for products
+  - `[x]` Run migrations and seed database
+- `[x]` Phase 2: Global Cart State
+  - `[x]` Install Zustand
+  - `[x]` Create useCartStore
+  - `[x]` Integrate Cart into UI (Header & Product Card)
+- `[x]` Phase 3: Authentication
+  - `[x]` Install NextAuth.js
+  - `[x]` Setup NextAuth config (Credentials + Google OAuth)
+  - `[x]` Create sign-in & sign-up pages
+  - `[x]` Create registration API route
+  - `[x]` Wire auth into Header & Side Drawer
+  - `[x]` Add AuthProvider to ClientLayout
+- `[x]` Phase 4: Payment Integration
+  - `[x]` Install Stripe
+  - `[x]` Create Stripe checkout API route
+  - `[x]` Create Stripe webhook handler
+  - `[x]` Update cart page with Stripe payment option
+  - `[x]` Create checkout success page
+- `[x]` Phase 5: UI & Data Integration
+  - `[x]` Create Orders API route
+  - `[x]` Add auth-aware sign-in prompt to checkout
+  - `[x]` Connect product pages to DB (future enhancement)
+  - `[x]` Build real "My Orders" page with DB data (future enhancement)
